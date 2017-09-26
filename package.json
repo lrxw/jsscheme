@@ -1,0 +1,9 @@
+{
+  "name": "jsscheme",
+  "version": "1.0.0",
+  "description": "scheme interpreter written in js",
+  "main": "index.js",
+  "repository": "https://github.com/lrxw/jsscheme.git",
+  "author": "lrxw",
+  "license": "MIT"
+}
