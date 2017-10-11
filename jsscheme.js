@@ -11,14 +11,30 @@ rl.prompt();
 
 rl.on('line', (line) => {
   var line = line.trim();
-  console.log(new Pair(1,2).toString());
-  rl.prompt();
+  parse(line);
+  console.log("you said" + line);
+  rl.prompt("new Pair(2,3).toString()");
 }).on('close', () => {
   console.log('Have a great day!');
   process.exit(0);
 });
 
+function parse(line) {
+  console.log("parsing");
+  if(line != null && line.startsWith("(") && line.endsWith(")")) {
+    console.log("scheme found");
+  } else if(line == null) {
+    console.log("plz input");
+  } else if (!line.startsWith("(")) {
+    console.log("start wrong");
+  } else if(line.endsWith("(")) {
+    console.log("end wrong");
+  } else {
+    console.log("something wrong")
+  }
+}
 
+//String.prototype.start
 
 function Pair(car, cdr) {
     this.car = car;
@@ -28,7 +44,7 @@ function Pair(car, cdr) {
     }
 } 
 
-function List(args[]){
+//function List(...args){
 
-    
-} 
+
+//} 
